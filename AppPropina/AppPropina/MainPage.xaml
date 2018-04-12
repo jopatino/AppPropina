@@ -4,8 +4,37 @@
              xmlns:local="clr-namespace:AppPropina"
              x:Class="AppPropina.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <TableView Intent="Form">
+        <TableSection Title="Datos Generales"
+                      >
+            <EntryCell x:Name="entTotal" 
+                       Label="Total"
+                       Placeholder="$0.0">
+            </EntryCell>
+            <EntryCell x:Name="entPropina" 
+                       Label="Propina"
+                       Placeholder="%">
+            </EntryCell>
+            <EntryCell x:Name="entPersonas" 
+                       Label="Número de Personas"
+                       Placeholder="Ingresar número 
+                                    de personas">
+            </EntryCell>
+        </TableSection>
+        <TableSection Title="Calcular"
+                      >
+            <ViewCell>
+                <ViewCell.View>
+                    <StackLayout>
+                        <Button Text="Calcular"
+                                x:Name="btnCalcular">
+                            
+                        </Button>
+                    </StackLayout>
+                </ViewCell.View>
+            </ViewCell>
+        </TableSection>
+        
+    </TableView>
 
 </ContentPage>
